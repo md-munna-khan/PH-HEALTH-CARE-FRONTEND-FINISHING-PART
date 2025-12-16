@@ -26,7 +26,7 @@ const ScheduleFormDialog = ({
   const formRef = useRef<HTMLFormElement>(null);
   const [state, formAction, isPending] = useActionState(createSchedule, null);
   const prevStateRef = useRef(state);
-
+console.log(state)
   // Handle success/error from server
   useEffect(() => {
     if (state === prevStateRef.current) return;
